@@ -1,0 +1,299 @@
+.gridContainer{
+	display: grid;
+	grid-template-columns:repeat(10, 1fr);
+	grid-template-rows: 100px 200px;
+}
+
+.gridContainerPadre{
+	display: grid;
+	grid-template-areas: 
+	"header header header header";
+	grid-template-rows: 100px;
+	grid-template-columns: 50% 50%;
+    position: sticky;
+    top: 10px;
+}
+
+.gridContainerPadreSobrenosotros {
+    display: grid;
+    grid-template-areas: 
+    "header header header header";
+    grid-template-rows: 100px;
+    grid-template-columns: 50% 50%;
+    position: sticky;
+    top: 0%;
+    background-color: #C7D5D6;
+}
+
+
+a {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 23px;
+    text-decoration: none;
+    color: black;
+}
+
+header{
+	grid-area: header;
+    background-color: #C7D5D6;
+}
+
+.flex{
+	display: flex;
+}
+
+.flex-justify{
+	justify-content: flex-end;
+}
+.flex-center{
+	justify-content: center;
+}
+.flex-around{
+	justify-content: space-around;
+}
+
+li{
+    list-style-type: none;
+    font-family: 'Frank Ruhl Libre', serif;
+    padding: 20px;
+    font-size: 20px;
+    color: #000;
+    background-color: #C7D5D6;
+}
+
+.contactanos {
+    border-style: outset;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+}
+
+.cartelcolor {
+    height: 100px;
+    padding-left: 3px;
+    padding-right: 6px;
+}
+
+.principal {
+    background-color: #C7D5D6;
+}
+
+h2 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: x-large;
+    grid-area: h2;
+}
+
+h1 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: xx-large;
+    grid-area: h1
+}
+
+.barraNav {
+    font-family: 'Frank Ruhl Libre', serif, Bold;
+    font-size: 20px;
+}
+
+#img-design {
+    width: 700px;
+    height: 400px;
+}
+
+#Marcas {
+    background-size: 1280px 1000px;
+    background-color: #B6C8CA
+}
+
+.logos {
+    width: 100px;
+    height: auto;
+    padding-left: 30px;
+    padding-right: 30px
+}
+
+.logos2 {
+    width: 65px;
+    height: auto;
+    padding-left: 30px;
+    padding-right: 30px
+}
+
+.gridContainerHijo {
+    display: grid;
+	grid-template-areas: 
+	"h2"
+    "img img img img";
+	grid-template-rows: 100px 1fr 100px;
+	grid-template-columns: 50% 50% 50% 50%;
+    background-color: #B6C8CA;
+}
+
+
+.gridContainerPorqnosotros {
+    display: grid;
+    grid-template-areas: 
+    "h1"
+    "img h2";
+    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: auto;
+    background-color: #C7D5D6;
+    height: 700px;
+}
+
+img {
+    grid-area: img;
+}
+
+footer {
+    background-color: #C7D5D6;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+}
+
+.rrss {
+    width: 30px;
+}
+
+.wpp {
+    width: 30px;
+}
+
+.button {
+    border-radius: 25px;
+    background-color: #B6C8CA;
+    padding: 40px;
+    text-align: center;
+    width: 70px;
+    height: 30px;
+    position: relative;
+    animation-name: fill;
+    animation-duration: 4s;
+}
+
+@keyframes fill {
+    0%   {background-color:#B6C8CA}
+    25%  {background-color:#C7D5D6}
+    50%  {background-color:rgb(168, 168, 168)}
+    75%  {background-color:white}
+    100% {background-color: #B6C8CA}
+  }
+
+/* vista mobile */
+@media only screen and (min-width: 0px) and (max-width: 768px){
+	.gridContainerPadre {
+		display: grid;
+		grid-template-areas: 
+		"logo"
+		"nav"
+		"img"
+		"main"
+		"footer";
+		grid-template-columns: 100%;
+		grid-template-rows: 100px 150px 1fr 350px 200px;
+	}
+
+	header{
+		grid-area: logo;
+
+	}
+	nav {
+		grid-area: nav;
+	}
+	.img {
+		grid-area: img;
+	}
+	img{
+		width: 100%;
+		height: auto;
+	}
+	main {
+		grid-area: main;
+	}
+	.footerIndex{
+		grid-area: footer;
+		background-color: #B6C8CA;
+	}
+
+	a{
+		text-decoration: none;
+		color: black;
+
+	}
+	li{
+		list-style-type: none;
+		padding: 10px;
+	
+	}
+	.bg-yellow{
+		background-color: B6C8CA;
+	}
+	p {
+		font-size: 30px;
+		color: black;
+	}
+	.border {
+	border: 1px dashed black;
+	}
+
+@media only screen and (min-width: 1024px) {
+    
+        .gridContainerPadre {
+            display: grid;
+            grid-template-areas: 
+            "logo nav nav nav"
+            "img img main main"
+            "footer footer footer footer";
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 120px 1fr 350px;
+        }
+    
+        header{
+            grid-area: logo;
+        }
+        nav {
+            grid-area: nav;
+        }
+        .img {
+            grid-area: img;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        main {
+            grid-area: main;
+        }
+        .footerIndex{
+            grid-area: footer;
+        }
+        a{
+            text-decoration: none;
+            color: black;}
+        li{
+            list-style-type: none;
+            padding: 20px;
+            font-size: 20px;
+        }
+        .flex-justify{
+            justify-content: flex-end;
+        }
+        .flex-center{
+            justify-content: center;
+        }
+        .flex-around{
+            justify-content: space-around;
+        }
+        footer{
+            background-size: cover;
+        }
+        nav{
+            width: 100%;
+        }
+        p {
+            font-size: 50px;
+        }
+        .border {
+        border: 1px solid black;
+        }
